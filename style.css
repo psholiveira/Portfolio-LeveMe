@@ -1,0 +1,147 @@
+.bold-text{
+    
+    font-size: larger; 
+    font-weight: 700;
+}
+
+    /* Tabs */ 
+.tabs {
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  margin-bottom:1.5rem;
+  flex-wrap:wrap;
+}
+.tab-button {
+  padding: 1rem 2rem;       
+  font-size: 1.1rem;       
+  border:none;
+  border-radius:50px;
+  background:#007BFF;
+  color:#fff;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+.tab-button:hover {background:#00CFFF;}
+.tab-button.active {background:#00FFA3;}
+.tab-content {
+  max-width:800px;
+  margin:0 auto;
+  display:none;
+  opacity:0;
+  transition: opacity .5s ease;
+}
+.tab-content.active {
+  display:block;
+  opacity:1;
+}
+
+
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f4f4f9;color:#333;scroll-behavior:smooth;overflow-x:hidden;}
+
+/* Header */
+header{
+  position:fixed;top:0;left:0;width:100%;padding:1rem 2rem;
+  display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(270deg,#007BFF,#00CFFF,#00FFA3);
+  background-size:600% 600%;animation:gradient 12s ease infinite;
+  color:#fff;z-index:1000;box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+@keyframes gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+header h1{font-weight:800;}
+nav{display:flex;gap:1.5rem;}
+nav a{color:#fff;text-decoration:none;font-weight:600;transition:.3s;}
+nav a:hover{color:#ffeb3b;}
+.menu-toggle{display:none;font-size:1.8rem;cursor:pointer;}
+@media(max-width:768px){
+  nav{position:fixed;top:70px;right:-100%;flex-direction:column;background:#007BFF;width:220px;height:100vh;padding:2rem;transition:right .4s;}
+  nav.active{right:0;}
+  .menu-toggle{display:block;}
+}
+
+/* Seções */
+section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+padding:4rem 2rem;text-align:center;opacity:0;transform:translateY(50px);transition:all 1s ease;}
+section.visible{opacity:1;transform:translateY(0);}
+.parallax{background-attachment:scroll;background-size:cover;background-position:center;color:#fff;position:relative;}
+#home{background:url('https://images.pexels.com/photos/30668651/pexels-photo-30668651.jpeg') no-repeat center/cover;}
+#sobre{background:#f0f4f8;color:#333;}
+#servicos{background:url('https://images.pexels.com/photos/1813686/pexels-photo-1813686.jpeg') no-repeat center/cover;}
+#contato{background:#f0f4f8;color:#333;}
+#fale-conosco{background:#fff;color:#333;}
+
+/* Overlay */
+.parallax::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.4);}
+.parallax > *{position:relative;z-index:1;}
+
+/* Títulos */
+h2{font-size:2.5rem;margin-bottom:1rem;font-weight:800;color:#007BFF;}
+.parallax h2{color:#fff;}
+p{max-width:700px;margin:0 auto 2rem;}
+
+/* Cards container */
+.cards {display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: stretch; margin-top: 2rem;}
+
+/* Cards 3D */
+.card-3d {
+  background: linear-gradient(270deg,#007BFF,#00CFFF,#00FFA3);
+  background-size: 600% 600%;
+  animation:gradient 12s ease infinite;
+  color:#fff;
+  border-radius:20px;
+  padding:2rem;
+  width:280px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  transition: transform .2s ease, box-shadow .2s ease, opacity .5s;
+  cursor:pointer;
+  transform-style:preserve-3d;
+  opacity:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.card-3d.visible { opacity:1; }
+.card-3d i{ font-size:3rem; margin-bottom:1rem; }
+.card-3d:hover{ transform: scale(1.05); }
+@media(max-width:900px){ .cards{flex-direction:column;align-items:center;} }
+
+/* Botões */
+.button{
+  display:inline-block;
+  background:linear-gradient(90deg,#007BFF,#00CFFF);
+  color:#fff;
+  padding:.9rem 2rem;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+  overflow:hidden;
+  transition:.3s, transform .3s;
+}
+.button::after{
+  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(255,255,255,0.3);transition:.5s;
+}
+.button:hover::after{left:100%;}
+.button:hover{transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,0.2);background-position:200% center;}
+.button-animated{background:linear-gradient(270deg,#007BFF,#00CFFF,#00FFA3);background-size:600% 600%;animation:gradient 8s ease infinite;}
+
+/* Formulário */
+form{max-width:600px;width:100%;display:flex;flex-direction:column;gap:1rem;margin-top:2rem;}
+input,textarea{padding:1rem;border:1px solid #ccc;border-radius:10px;font-size:1rem;transition:.3s;}
+input:focus,textarea:focus{outline:none;border-color:#007BFF;box-shadow:0 0 8px rgba(0,123,255,0.3);}
+textarea{resize:none;height:120px;}
+
+/* Modal confirmação */
+#modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:flex;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:opacity .3s;}
+#modal.active{opacity:1;visibility:visible;}
+#modal .modal-content{background:#fff;padding:2rem;border-radius:15px;text-align:center;max-width:400px;box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+#modal button{margin-top:1rem;padding:.7rem 1.5rem;border:none;background:#007BFF;color:#fff;border-radius:50px;cursor:pointer;transition:.3s;}
+#modal button:hover{background:#00CFFF;}
+
+/* Botões flutuantes */
+.whatsapp-float{position:fixed;bottom:20px;right:20px;z-index:1000;}
+.instagram-float{position:fixed;bottom:90px;right:20px;z-index:1000;background:linear-gradient(45deg,#833AB4,#FD1D1D,#F56040);}

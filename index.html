@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeveMe</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1><i class="fa-solid fa-car"></i> LeveMe</h1>
+  <i class="fas fa-bars menu-toggle" aria-label="Abrir menu"></i>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+    <a href="#fale-conosco">Fale Conosco</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home" class="parallax">
+    <h2>Bem-vindo a LeveMe <i class="fa-solid fa-car"></i></h2>
+    <p>Muito além de transporte, um cuidado pessoal.</p>
+    <a href="#sobre" class="button button-animated">Conheça nossa empresa</a>
+  </section>
+
+ <!-- SOBRE -->
+<section id="sobre">
+  <h2>Sobre a LeveMe <i class="fa-solid fa-car"></i></h2>
+
+  <!-- Abas -->
+  <div class="tabs">
+    <button class="tab-button active" data-tab="sobreNos">Sobre Nós <i class="fa-solid fa-face-smile"></i></i></button>
+    <button class="tab-button" data-tab="publicoAlvo">Público Alvo <i class="fa-solid fa-bullseye"></i></button>
+    <button class="tab-button" data-tab="diferenciais">Diferenciais <i class="fa-solid fa-lightbulb"></i></button>
+  </div>
+
+  <!-- Conteúdos das abas -->
+  <div class="tab-content active" id="sobreNos">
+    <p style="text-align:left;" class="bold-text">
+      Nosso compromisso vai além de levar você do ponto A ao ponto B. Priorizamos segurança, pontualidade e conforto, garantindo que cada viagem seja tranquila e agradável. Todos os nossos motoristas são cuidadosamente selecionados e treinados para oferecer um atendimento atencioso e personalizado, entendendo as necessidades de cada cliente.
+    </p>
+  </div>
+
+  <div class="tab-content" id="publicoAlvo">
+    <ul style="text-align:left;">
+      <li class="bold-text">Público em geral que buscam conforto, segurança e praticidade no dia a dia.</li>
+      <li class="bold-text">40+ e idosos que precisam de assistência personalizada para deslocamentos e organização de tarefas.</li>
+      <li class="bold-text">Profissionais e famílias que desejam terceirizar compromissos cotidianos com confiança.</li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="diferenciais">
+    <ul style="text-align:left;">
+      <li class="bold-text">Atendimento humanizado e personalizado.</li>
+      <li class="bold-text">Segurança: motoristas de confiança, com cadastro e referência.</li>
+      <li class="bold-text">Comodidade: foco em resolver tarefas para que o cliente aproveite mais o tempo livre.</li>
+      <li class="bold-text">Flexibilidade: atendimento sob demanda ou em pacotes mensais</li>
+      <li class="bold-text">Confiança e sigilo no trato de informações pessoais e financeiras</li>
+    </ul>
+  </div>
+</section>
+
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="parallax">
+    <h2>Planos <i class="fa-solid fa-clipboard"></i></h2>
+    <div class="cards">
+      <div class="card-3d">
+      <i class="fa-solid fa-a"></i>
+        <h3>Pacote Avulso </h3>
+        <p>Contratação por hora ou viagem.</p>
+      </div>
+      <div class="card-3d">
+        <i class="fa-solid fa-e"></i>
+        <h3>Pacote Essencial</h3>
+        <p> Até 12 horas mensais de serviço.</p>
+      </div>
+      <div class="card-3d">
+       <i class="fa-solid fa-crown"></i>
+        <h3>Pacote Premium</h3>
+        <p>Até 30 horas mensais, com prioridade de agendamento.</p>
+      </div>
+      <div class="card-3d">
+        <i class="fa-solid fa-ruler-horizontal"></i>
+        <h3>Sob medida</h3>
+        <p>Personalizado de acordo com as necessidades do cliente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>Contato <i class="fa-solid fa-phone"></i></h2>
+    <p class="bold-text">Telefone: (83) 99393-1084</p>
+    <p class="bold-text">Email: levemetransporte@gmail.com</p>
+    <p class="bold-text">Endereço: João Pessoa - Paraíba</p>
+  </section>
+
+  <!-- FALE CONOSCO -->
+  <section id="fale-conosco">
+    <h2>Fale Conosco <i class="fa-solid fa-phone"></i></h2>
+    <p class="bold-text">Preencha o formulário abaixo ou entre em contato direto pelo WhatsApp ou Instagram.</p>
+    <form id="formContato">
+      <input type="text" name="nome" placeholder="Seu nome" required aria-label="Nome">
+      <input type="email" name="email" placeholder="Seu e-mail" required aria-label="E-mail">
+      <input type="text" name="assunto" placeholder="Assunto" required aria-label="Assunto">
+      <textarea name="mensagem" placeholder="Sua mensagem" required aria-label="Mensagem"></textarea>
+      <button type="submit" class="button button-animated">Enviar</button>
+    </form>
+  </section>
+</main>
+
+<!-- Modal Confirmação -->
+<div id="modal">
+  <div class="modal-content">
+    <h3>Mensagem enviada com sucesso!</h3>
+    <button onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<!-- Botões flutuantes -->
+<a href="https://wa.me/5583993931084" target="_blank" class="button button-animated whatsapp-float" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<a href="https://www.instagram.com/levemetransporte" target="_blank" class="button button-animated instagram-float" aria-label="Instagram">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<footer>
+  <p style="text-align:center;">© 2025 LeveMe. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+emailjs.init("SEU_USER_ID");
+
+// Scroll reveal
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");}});},{threshold:0.2});
+sections.forEach(sec=>observer.observe(sec));
+
+// Cards reveal
+const cards=document.querySelectorAll(".card-3d");
+const cardObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");}});},{threshold:0.2});
+cards.forEach(card=>cardObserver.observe(card));
+
+// Cards 3D efeito mouse
+cards.forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width/2;
+    const centerY = rect.height/2;
+    const rotateX = Math.max(-10, Math.min(10, ((y - centerY) / centerY) * 10));
+    const rotateY = Math.max(-10, Math.min(10, ((x - centerX) / centerX) * 10));
+    card.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    card.style.boxShadow = `${-rotateY*2}px ${rotateX*2}px 30px rgba(0,0,0,0.3)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+    card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+  });
+});
+
+// Menu mobile
+const toggle=document.querySelector(".menu-toggle");
+const nav=document.querySelector("nav");
+toggle.addEventListener("click",()=>{nav.classList.toggle("active");});
+
+// Modal functions
+function openModal(){document.getElementById("modal").classList.add("active");}
+function closeModal(){document.getElementById("modal").classList.remove("active");}
+
+// Envio de formulário EmailJS
+document.getElementById("formContato").addEventListener("submit", function(e){
+  e.preventDefault();
+  const form = this;
+  emailjs.sendForm('SEU_SERVICE_ID','SEU_TEMPLATE_ID', form)
+    .then(()=>{ openModal(); form.reset(); setTimeout(closeModal, 3000); })
+    .catch(()=>{alert("Erro ao enviar, tente novamente.");});
+});
+
+//Tabs
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Desativa todas as abas
+    tabButtons.forEach(b => b.classList.remove('active'));
+    
+    tabContents.forEach(c => {
+      c.classList.remove('active');
+      // Garante que o fade de saída ocorra antes de esconder
+      c.style.display = 'none';
+    });
+
+    // Ativa a aba clicada
+    btn.classList.add('active');
+    const activeContent = document.getElementById(btn.dataset.tab);
+    activeContent.style.display = 'block';
+    // Garante o fade de entrada
+    setTimeout(() => {
+      activeContent.classList.add('active');
+    }, 10);
+  });
+});
+</script>
+
+</body>
+</html>
