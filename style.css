@@ -121,9 +121,8 @@ section.visible { opacity:1; transform:translateY(0); }
 #home { background:url('https://images.pexels.com/photos/30668651/pexels-photo-30668651.jpeg') no-repeat center/cover; }
 #sobre, #contato { background:var(--bg-light-alt); color:var(--text-dark); }
 #servicos { background:url('https://images.pexels.com/photos/1813686/pexels-photo-1813686.jpeg') no-repeat center/cover; }
-#fale-conosco { background:#fd0202b4; color:var(--text-dark); }
+#fale-conosco { background:#dfddddad; color:var(--text-dark); }
 .parallax h2 { color:#fff; }
-
 
 /* =========================
    TABS
@@ -259,6 +258,7 @@ textarea { resize:none; height:120px; }
   bottom:90px;
   background:linear-gradient(45deg,#833AB4,#FD1D1D,#F56040);
 }
+
 
 
 
