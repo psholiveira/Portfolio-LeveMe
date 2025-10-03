@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<meta name="description" content="LeveMe - Transporte personalizado com segurança, conforto e confiança. Especial para idosos, famílias e profissionais.">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LeveMe</title>
@@ -26,10 +27,11 @@
 <main>
   <!-- HOME -->
   <section id="home" class="parallax">
-    <h2>Bem-vindo a LeveMe <i class="fa-solid fa-car"></i></h2>
-    <p>Muito além de transporte, um cuidado pessoal.</p>
-    <a href="#sobre" class="button button-animated">Conheça nossa empresa</a>
-  </section>
+  <img src="img/logo.png" alt="LeveMe - Transporte com segurança e confiança" class="logo-home">
+  <p>Muito além de transporte, um cuidado pessoal.</p>
+  <a href="#sobre" class="button button-animated">Conheça nossa empresa</a>
+</section>
+
 
  <!-- SOBRE -->
 <section id="sobre">
@@ -37,9 +39,9 @@
 
   <!-- Abas -->
   <div class="tabs">
-    <button class="tab-button active" data-tab="sobreNos">Sobre Nós <i class="fa-solid fa-face-smile"></i></i></button>
-    <button class="tab-button" data-tab="publicoAlvo">Público Alvo <i class="fa-solid fa-bullseye"></i></button>
-    <button class="tab-button" data-tab="diferenciais">Diferenciais <i class="fa-solid fa-lightbulb"></i></button>
+    <button class="tab-button active" data-tab="sobreNos">Sobre Nós <i class="fa-solid fa-face-smile" aria-hidden="true"></i></i></button>
+    <button class="tab-button" data-tab="publicoAlvo">Público Alvo <i class="fa-solid fa-bullseye" aria-hidden="true"></i></button>
+    <button class="tab-button" data-tab="diferenciais">Diferenciais <i class="fa-solid fa-lightbulb" aria-hidden="true"></i></button>
   </div>
 
   <!-- Conteúdos das abas -->
@@ -71,25 +73,25 @@
 
   <!-- SERVIÇOS -->
   <section id="servicos" class="parallax">
-    <h2>Planos <i class="fa-solid fa-clipboard"></i></h2>
+    <h2>Planos <i class="fa-solid fa-clipboard" aria-hidden="true"></i></h2>
     <div class="cards">
       <div class="card-3d">
-      <i class="fa-solid fa-a"></i>
+      <i class="fa-solid fa-a" aria-hidden="true"></i>
         <h3>Pacote Avulso </h3>
         <p>Contratação por hora ou viagem.</p>
       </div>
       <div class="card-3d">
-        <i class="fa-solid fa-e"></i>
+        <i class="fa-solid fa-e" aria-hidden="true"></i>
         <h3>Pacote Essencial</h3>
         <p> Até 12 horas mensais de serviço.</p>
       </div>
       <div class="card-3d">
-       <i class="fa-solid fa-crown"></i>
+       <i class="fa-solid fa-crown" aria-hidden="true"></i>
         <h3>Pacote Premium</h3>
         <p>Até 30 horas mensais, com prioridade de agendamento.</p>
       </div>
       <div class="card-3d">
-        <i class="fa-solid fa-ruler-horizontal"></i>
+        <i class="fa-solid fa-ruler-horizontal" aria-hidden="true"></i>
         <h3>Sob medida</h3>
         <p>Personalizado de acordo com as necessidades do cliente.</p>
       </div>
@@ -98,7 +100,7 @@
 
   <!-- CONTATO -->
   <section id="contato">
-    <h2>Contato <i class="fa-solid fa-phone"></i></h2>
+    <h2>Contato <i class="fa-solid fa-phone" aria-hidden="true"></i></h2>
     <p class="bold-text">Telefone: (83) 99393-1084</p>
     <p class="bold-text">Email: levemetransporte@gmail.com</p>
     <p class="bold-text">Endereço: João Pessoa - Paraíba</p>
@@ -106,7 +108,7 @@
 
   <!-- FALE CONOSCO -->
   <section id="fale-conosco">
-    <h2>Fale Conosco <i class="fa-solid fa-phone"></i></h2>
+    <h2>Fale Conosco <i class="fa-solid fa-phone" aria-hidden="true"></i></h2>
     <p class="bold-text">Preencha o formulário abaixo ou entre em contato direto pelo WhatsApp ou Instagram.</p>
     <form id="formContato">
       <input type="text" name="nome" placeholder="Seu nome" required aria-label="Nome">
@@ -127,10 +129,10 @@
 </div>
 
 <!-- Botões flutuantes -->
-<a href="https://wa.me/5583993931084" target="_blank" class="button button-animated whatsapp-float" aria-label="WhatsApp">
+<a href="https://wa.me/5583993931084" target="_blank" class="button button-animated whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
   <i class="fab fa-whatsapp"></i>
 </a>
-<a href="https://www.instagram.com/levemetransporte" target="_blank" class="button button-animated instagram-float" aria-label="Instagram">
+<a href="https://www.instagram.com/levemetransporte" target="_blank" class="button button-animated instagram-float" aria-label="Instagram" rel="noopener noreferrer">
   <i class="fab fa-instagram"></i>
 </a>
 
@@ -175,6 +177,10 @@ cards.forEach(card => {
 const toggle=document.querySelector(".menu-toggle");
 const nav=document.querySelector("nav");
 toggle.addEventListener("click",()=>{nav.classList.toggle("active");});
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => nav.classList.remove("active"));
+});
+
 
 // Modal functions
 function openModal(){document.getElementById("modal").classList.add("active");}
